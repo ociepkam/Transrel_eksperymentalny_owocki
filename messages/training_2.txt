@@ -1,0 +1,19 @@
+Po kilku sekundach od prezentacji dwu par poniżej ich pojawią się kolejne trzy pary stanowiące opcje odpowiedzi. Tylko jedna z tych opcji poprawnie prezentuje położenie dwóch owoców czy warzyw względem siebie zgodne z położeniem określonym przez pierwsze dwie pary. Pozostałe dwie opcje pokazują błędne położenie. Opcje odpowiedzi wybierasz naciskając klawisze strzałek: ← to lewa opcja, ↓ to środkowa opcja, → to prawa opcja. Na wybór opcji masz kilka sekund. Prawidłowe wykonanie zadania polega na wyborze poprawnej opcji odpowiedzi. Wybór opcji pokazującej położenie obiektów niezgodne z dwiema pierwszymi parami będzie stanowić błędną odpowiedź.
+
+Oto przykład: jeżeli najpierw pokażą się takie dwie pary: ^/ |ꙮ
+
+a potem pokażą się takie trzy opcje odpowiedzi: ꙮ/^ ^| ꙮ\^
+
+to powinno się wybrać opcję prawą naciskając klawisz strzałki →
+
+Czasem można wybrać poprawną opcję w oparciu o jedną parę, np. dla par: ѽ/^ |^
+
+oraz opcji odpowiedzi: ^\ѽ ^/ѽ ѽ|
+
+opcja lewa (←) poprawnie opisuje położenie ѽ i ^ w pierwszej parze, a jedynie kolejność obiektów i znak są odwrotne
+
+Czasem poprawna opcja odpowiedzi jest powtórzeniem jednej z par, np. dla par: ꙮ/ѽ ѽ|
+
+poprawną opcją jest opcja środkowa (↓) identyczna z drugą parą: □/ꙮ ѽ| ꙮ\ѽ
+
+Przeczytaj uważnie instrukcję oraz przykłady i upewnij się, czy rozumiesz, na czym polega zadanie. Jeżeli czegoś wciąż nie rozumiesz, bez obaw zadaj pytanie osobie badającej. Jeżeli nie masz pytań, poczekaj na sygnał, aby rozpocząć trening, który będzie składał się z kilkunastu prób.

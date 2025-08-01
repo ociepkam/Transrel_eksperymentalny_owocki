@@ -1,0 +1,17 @@
+Teraz przejdziemy do właściwego zadania. Najpierw powtórzmy sobie jeszcze raz instrukcję:
+
+Na ekranie najpierw pokazują się dwie pary owoców lub warzyw przedzielonych znakiem.
+
+znak / mówi, że obiekt po jego lewej stronie jest nad obiektem po jego prawej stronie (czyli obiekt po prawej stronie jest pod obiektem po lewej stronie)
+
+znak \ mówi, że obiekt po jego lewej stronie jest pod obiektem po jego prawej stronie (czyli obiekt po prawej stronie jest nad obiektem po lewej stronie)
+
+znak | mówi, że oba obiekty są dokładnie na tej samej wysokości, czyli są idealnie obok siebie
+
+Zawsze jeden z obiektów wystąpi w obu parach, dwa inne obiekty będą różne.
+
+Po kilku sekundach pojawią się trzy opcje odpowiedzi. Tylko jedna opcja prezentuje położenie dwu obiektów względem siebie zgodne z położeniem określonym przez pierwsze dwie pary. Pozostałe dwie opcje pokazują błędne położenie. Opcje odpowiedzi wybierasz naciskając prawą dłonią klawisze strzałek: ← to lewa opcja, ↓ to środkowa opcja, → to prawa opcja. Na wybór opcji masz kilka sekund. Prawidłowe wykonanie zadania polega na wyborze poprawnej opcji odpowiedzi. Staraj się skupić i wykonywać zadanie możliwe poprawnie. Dzięki temu dowiemy się, jak działa ludzka wyobraźnia, co może w przyszłości pomóc w diagnozie i terapii dzieci i osób starszych z różnymi deficytami poznawczymi.
+
+Całe zadanie zawiera 160 prób i trwa około 40 minut. Każdą próbę rozpoczynasz klawiszem spacji (połóż na niej lewą dłoń). Możesz sobie robić krótkie przerwy, jeżeli chcesz.
+
+Jeżeli uznajesz, że możesz teraz rozpocząć badanie, naciśnij spację by zacząć

@@ -1,0 +1,13 @@
+To zadanie wymaga wyobrażania sobie położenia trzech owoców i warzyw względem siebie na podstawie informacji o położeniu par owoców czy warzyw (np. jabłko, gruszka, winogrona, por). Są trzy znaki określające wzajemne położenie dwóch owoców lub warzyw: znak / znak \ oraz znak |
+
+znak / mówi, że owoc czy warzywo po jego lewej stronie jest nad owocem czy warzywem po jego prawej stronie (czyli to co po prawej stronie jest pod tym co po lewej stronie), na przykład 🍎/🍌 to „jabłko nad bananem” (czyli „banan pod jabłkiem”)
+
+znak \ mówi, że owoc czy warzywo po jego lewej stronie jest pod owocem czy warzywem po jego prawej stronie (czyli to co po prawej stronie jest nad tym co po lewej stronie), na przykład 🍎\🍌 to „jabłko pod bananem” (czyli „banan nad jabłkiem”)
+
+Łatwo zapamiętać znaczenie obu tych znaków, jeżeli wyobrazisz sobie je jako taką deseczkę, która przykrywa ten owoc czy warzywo, w stronę którego jest pochylona, a z kolei na tej deseczce leży drugi owoc czy warzywo.
+
+znak | mówi, że owoce czy warzywa są dokładnie na tej samej wysokości (tak jakby przedzielone deseczką), jak na przykład tu: 🍇|🥔 („winogrona obok ziemniaka”)
+
+Za każdym razem na ekranie będą się pokazywać dwie pary połączone znakiem. Jeden owoc czy warzywo wystąpi w obu parach, dwa inne będą różne (razem w obu parach będą zawsze trzy różne owoce i warzywa).
+
+Na przykład, te dwie pary: 🍎/🥔 oraz 🍌|🍎 oznaczają, że jabłko leży nad ziemniakiem, a banan i jabłko leżą obok siebie, zatem ziemniak leży zarówno pod jabłkiem jak i pod bananem (często trzeba będzie łączyć informację z obu par). Wyobrażaj sobie wzajemne położenie wszystkich trzech obiektów!

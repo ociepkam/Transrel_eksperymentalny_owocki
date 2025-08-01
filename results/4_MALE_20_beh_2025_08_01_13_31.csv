@@ -1,0 +1,13 @@
+n,block_type,block_n,binding,trial_type,acc,rt,order,stimulus,answers,correct_answer
+1,training,1,True,sym_identical,1,2.518095700070262,CBA,"['A\\B', 'C|B']","['C/B', 'A|C', 'C|B']",C|B
+2,training,1,True,sym_reversed,1,3.1683954999316484,CBA,"['A\\B', 'C|B']","['B|C', 'A|B', 'C\\A']",B|C
+3,training,1,True,sym_reversed,1,2.4187157000415027,BAC,"['A\\B', 'C|A']","['A|C', 'B|A', 'B\\C']",A|C
+4,training,1,True,sym_reversed,1,1.3513358999043703,CBA,"['A\\B', 'C|B']","['A|C', 'B/C', 'B|C']",B|C
+5,training,1,True,two_pairs,1,1.9351799001451582,CAB,"['A/B', 'A|C']","['B\\C', 'B|A', 'C\\B']",B\C
+6,training,1,True,rel_reversed,1,1.6514218000229448,ABC,"['A/B', 'B|C']","['B\\A', 'A|B', 'A\\C']",B\A
+7,training,1,True,two_pairs,1,4.702030900167301,CAB,"['A/B', 'A|C']","['B\\C', 'A|B', 'C\\B']",B\C
+8,training,1,True,rel_reversed,1,4.051432600012049,CAB,"['A/B', 'A|C']","['B\\A', 'A\\B', 'B|C']",B\A
+9,training,1,True,two_pairs,1,2.8020943999290466,CAB,"['A/B', 'A|C']","['C\\A', 'B\\C', 'C|B']",B\C
+10,training,1,True,rel_reversed,1,2.167906899936497,BAC,"['A\\B', 'C|A']","['B/A', 'A/C', 'B|C']",B/A
+11,training,1,True,sym_identical,1,2.0349039998836815,CAB,"['A/B', 'A|C']","['A\\C', 'A|C', 'B|C']",A|C
+12,training,1,True,sym_identical,1,3.2347401999868453,ABC,"['A/B', 'B|C']","['B|C', 'A|C', 'B/A']",B|C

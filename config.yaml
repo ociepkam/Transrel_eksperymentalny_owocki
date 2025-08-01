@@ -1,0 +1,55 @@
+# main experimental
+stimulus_type: Fruits # implemented: Latin, Figures, Numbers, Fruits
+reaction_keys: [left, down, right]
+
+# main visual
+screen_color: "#CCCCCC"
+text_color: black
+text_size: 24
+
+# training
+training_n_blocks: 1
+training_trials: {"bind":    {"two_pairs": 0, "rel_reversed": 0, "rel_identical": 0, "sym_reversed": 0, "sym_identical": 0},
+                  "no_bind": {"two_pairs": 3, "rel_reversed": 3, "rel_identical": 0, "sym_reversed": 3, "sym_identical": 3}}
+training_thinking_time: 10
+training_answer_time: 10
+training_wait_time: 1.5
+training_wait_jitter: 0.5
+
+
+# experiment
+experiment_n_blocks: 1
+experiment_trials: {"bind":    {"two_pairs": 0, "rel_reversed": 0, "rel_identical": 0, "sym_reversed": 0, "sym_identical": 0},
+                    "no_bind": {"two_pairs": 40, "rel_reversed": 40, "rel_identical": 0, "sym_reversed": 40, "sym_identical": 40}}
+experiment_thinking_time: 8
+experiment_answer_time: 7
+experiment_wait_time: 1.5
+experiment_wait_jitter: 0.5
+
+# fixation point
+fixation_size: 56
+fixation_color: black
+fixation_text: +
+fixation_time: 1
+
+# feedback
+feedback_time: 2
+feedback_size: 28
+feedback_color: black
+
+break_text: Spacja rozpoczyna kolejną próbę
+break_size: 20
+break_color: black
+
+# trial
+elements_size: 50
+images_size: 55
+distance_in_pair: [35, 0]
+distance_between_stim_pairs: [50, 0]
+distance_between_answer_pairs: [50, 0]
+stimulus_pos: [-45, 100]
+answers_pos: [-65, -80]
+
+
+
+
