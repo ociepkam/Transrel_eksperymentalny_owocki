@@ -10,8 +10,8 @@ text_size: 24
 # training
 training_n_blocks: 1
 training_trials: {"bind":    {"two_pairs": 0, "rel_reversed": 0, "rel_identical": 0, "sym_reversed": 0, "sym_identical": 0},
-                  "no_bind": {"two_pairs": 3, "rel_reversed": 3, "rel_identical": 0, "sym_reversed": 3, "sym_identical": 3}}
-training_thinking_time: 10
+                  "no_bind": {"two_pairs": 0, "rel_reversed": 3, "rel_identical": 3, "sym_reversed": 3, "sym_identical": 3}}
+training_thinking_time: 5
 training_answer_time: 10
 training_wait_time: 1.5
 training_wait_jitter: 0.5
@@ -20,8 +20,8 @@ training_wait_jitter: 0.5
 # experiment
 experiment_n_blocks: 1
 experiment_trials: {"bind":    {"two_pairs": 0, "rel_reversed": 0, "rel_identical": 0, "sym_reversed": 0, "sym_identical": 0},
-                    "no_bind": {"two_pairs": 40, "rel_reversed": 40, "rel_identical": 0, "sym_reversed": 40, "sym_identical": 40}}
-experiment_thinking_time: 8
+                    "no_bind": {"two_pairs": 0, "rel_reversed": 40, "rel_identical": 40, "sym_reversed": 40, "sym_identical": 40}}
+experiment_thinking_time: 3
 experiment_answer_time: 7
 experiment_wait_time: 1.5
 experiment_wait_jitter: 0.5
