@@ -11,7 +11,7 @@ text_size: 24
 training_n_blocks: 1
 training_trials: {"bind":    {"two_pairs": 0, "rel_reversed": 0, "rel_identical": 0, "sym_reversed": 0, "sym_identical": 0},
                   "no_bind": {"two_pairs": 0, "rel_reversed": 3, "rel_identical": 3, "sym_reversed": 3, "sym_identical": 3}}
-training_thinking_time: 5
+training_thinking_time: 3
 training_answer_time: 10
 training_wait_time: 1.5
 training_wait_jitter: 0.5
