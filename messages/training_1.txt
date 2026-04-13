@@ -10,4 +10,4 @@ znak | mówi, że owoce czy warzywa są dokładnie na tej samej wysokości (tak 
 
 Za każdym razem na ekranie będą się pokazywać dwie pary połączone znakiem. Jeden owoc czy warzywo wystąpi w obu parach, dwa inne będą różne (razem w obu parach będą zawsze trzy różne owoce i warzywa).
 
-Na przykład, te dwie pary: 🍎/🥔 oraz 🍌|🍎 oznaczają, że jabłko leży nad ziemniakiem, a banan i jabłko leżą obok siebie, zatem ziemniak leży zarówno pod jabłkiem jak i pod bananem (często trzeba będzie łączyć informację z obu par). Wyobrażaj sobie wzajemne położenie wszystkich trzech obiektów!
+Na przykład, te dwie pary: 🍎/🥔 oraz 🍌|🍎 oznaczają, że jabłko leży nad ziemniakiem, a banan i jabłko leżą obok siebie.
