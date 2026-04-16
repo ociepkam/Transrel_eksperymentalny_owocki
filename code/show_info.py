@@ -5,7 +5,7 @@ import os
 
 
 def part_info():
-    info = {'Part_id': '', 'Part_age': '20', 'Part_sex': ['MALE', "FEMALE"]}
+    info = {'Part_id': '', 'Part_age': '20', 'Part_sex': ['MALE', "FEMALE", "OTHER"]}
     dictDlg = gui.DlgFromDict(dictionary=info, title='Transrel experimental')
     if not dictDlg.OK:
         exit(1)
