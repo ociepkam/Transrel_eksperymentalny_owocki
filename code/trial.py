@@ -91,6 +91,27 @@ def reverse_pair(pair):
         return pair[::-1]
 
 
+def _pair_parts(pair):
+    if isinstance(pair, str):
+        return pair[0], pair[1], pair[2]
+    return pair[0], pair[1], pair[2]
+
+
+def _invert_symbol(sym):
+    if sym == "/":
+        return "\\"
+    if sym == "\\":
+        return "/"
+    return "|"
+
+
+def canonical_pair(pair):
+    left, sym, right = _pair_parts(pair)
+    if left <= right:
+        return (left, sym, right)
+    return (right, _invert_symbol(sym), left)
+
+
 def all_possible_trials():
     all_trials = {"bind":    {"two_pairs": [], "sym_reversed": [], "sym_identical": [], "rel_reversed": [], "rel_identical": []},
                   "no_bind": {"two_pairs": [], "sym_reversed": [], "sym_identical": [], "rel_reversed": [], "rel_identical": []}}
@@ -148,6 +169,12 @@ def all_possible_trials():
             for incorrect_far in [f"{order[0]}\\{order[2]}", f"{order[2]}/{order[0]}"]:
                 for incorrect_pair in [f"{stim[0][0]}|{stim[0][2]}", f"{stim[0][2]}|{stim[0][0]}"]:
                     pairs = [answer, incorrect_pair, incorrect_far]
+
+                    can = [canonical_pair(p) for p in pairs]
+                    if len(set(can)) < 3:
+                        continue
+
+                    random.shuffle(pairs)
                     trial = {"stimulus": stim, "pairs": pairs, "answer": answer, "order": order,
                              "answer_type": answer_type, "with_binding": binding}
                     all_trials["no_bind"][answer_type].append(trial)
@@ -157,6 +184,10 @@ def all_possible_trials():
                                        f"{stim[1][0]}\\{stim[1][2]}", f"{stim[1][0]}/{stim[1][2]}",
                                        f"{stim[1][2]}\\{stim[1][0]}", f"{stim[1][2]}/{stim[1][0]}"]:
                     pairs = [answer, incorrect_pair, incorrect_far]
+                    can = [canonical_pair(p) for p in pairs]
+                    if len(set(can)) < 3:
+                        continue
+
                     random.shuffle(pairs)
                     trial = {"stimulus": stim, "pairs": pairs, "answer": answer, "order": order,
                              "answer_type": answer_type, "with_binding": binding}
