@@ -116,6 +116,7 @@ def run_block(block, config, win, stimulus_all, stimulus_type, fixation, clock, 
 
         # wait
         wait_time = config[f"{block_type}_wait_time"] + random.random() * config[f"{block_type}_wait_jitter"]
+        clock.reset()
         while clock.getTime() < wait_time:
             check_exit()
             win.flip()
