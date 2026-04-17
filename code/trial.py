@@ -112,6 +112,44 @@ def canonical_pair(pair):
     return (right, _invert_symbol(sym), left)
 
 
+def infer_all_relations(stim):
+    """
+    Given a stimulus (list of 2 relation strings, e.g. ["A/B", "B|C"]),
+    infer all logically true relations among the three elements and return
+    them as a set of canonical pairs.
+
+    Works by assigning a numeric height to each element based on the
+    relations in the stimulus (higher value = lower in hierarchy, following
+    the convention that '\\' means "is lower than" and '/' means "is higher than").
+    The first pair anchors two elements; the second pair places the third
+    element relative to one of the already-anchored elements.
+    All pairwise relations are then derived from the resulting height values
+    and stored in canonical form to allow direction-independent comparison.
+
+    Example:
+        stim = ["A/B", "B|C"]
+        → heights: A=0, B=1, C=1
+        → true relations: {canonical(A/B), canonical(A/C), canonical(B|C)}
+    """
+    heights = {}
+    l0, s0, r0 = _pair_parts(stim[0])
+    heights[l0] = 0
+    heights[r0] = heights[l0] + (1 if s0 == '\\' else -1 if s0 == '/' else 0)
+    l1, s1, r1 = _pair_parts(stim[1])
+    anchor, new = (l1, r1) if l1 in heights else (r1, l1)
+    sym_dir = s1 if anchor == l1 else _invert_symbol(s1)
+    heights[new] = heights[anchor] + (1 if sym_dir == '\\' else -1 if sym_dir == '/' else 0)
+    true_rels = set()
+    elems = list(heights.keys())
+    for i in range(len(elems)):
+        for j in range(i + 1, len(elems)):
+            a, b = elems[i], elems[j]
+            ha, hb = heights[a], heights[b]
+            sym = '/' if ha > hb else '\\' if ha < hb else '|'
+            true_rels.add(canonical_pair(f"{a}{sym}{b}"))
+    return true_rels
+
+
 def all_possible_trials():
     all_trials = {"bind":    {"two_pairs": [], "sym_reversed": [], "sym_identical": [], "rel_reversed": [], "rel_identical": []},
                   "no_bind": {"two_pairs": [], "sym_reversed": [], "sym_identical": [], "rel_reversed": [], "rel_identical": []}}
@@ -166,12 +204,16 @@ def all_possible_trials():
             else:
                 answer = f"{order[2]}\\{order[0]}"
 
+            true_rels = infer_all_relations(stim)
+
             for incorrect_far in [f"{order[0]}\\{order[2]}", f"{order[2]}/{order[0]}"]:
                 for incorrect_pair in [f"{stim[0][0]}|{stim[0][2]}", f"{stim[0][2]}|{stim[0][0]}"]:
                     pairs = [answer, incorrect_pair, incorrect_far]
 
                     can = [canonical_pair(p) for p in pairs]
                     if len(set(can)) < 3:
+                        continue
+                    if any(canonical_pair(p) in true_rels for p in [incorrect_pair, incorrect_far]):
                         continue
 
                     random.shuffle(pairs)
@@ -187,12 +229,14 @@ def all_possible_trials():
                     can = [canonical_pair(p) for p in pairs]
                     if len(set(can)) < 3:
                         continue
+                    if any(canonical_pair(p) in true_rels for p in [incorrect_pair, incorrect_far]):
+                        continue
 
                     random.shuffle(pairs)
                     trial = {"stimulus": stim, "pairs": pairs, "answer": answer, "order": order,
                              "answer_type": answer_type, "with_binding": binding}
                     all_trials["no_bind"][answer_type].append(trial)
-
+    print(all_trials)
     return all_trials
 
 # For random generation
